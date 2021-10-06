@@ -11,7 +11,6 @@ string = requests.get(url).text
 delimiter_h2 = '<h2>'
 string = [delimiter_h2 + sub_string for sub_string in string.split(delimiter_h2)][1:]
 
-delimiter_p = '</a>'
 for chapter in string:
 	chapter = html.unescape(chapter)
 	soup = BeautifulSoup(chapter, "lxml")
